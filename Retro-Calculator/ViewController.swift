@@ -97,7 +97,6 @@ class ViewController: UIViewController {
                 leftValStr = result
                 outputLbl.text = result
             }
-            
             currentOperation = op
             
         } else {
@@ -106,7 +105,17 @@ class ViewController: UIViewController {
             runningNumber = ""
             currentOperation = op
         }
+    }
     
+    @IBAction func ClearBtn(sender:AnyObject) {
+        playSound()
+        runningNumber = ""
+        leftValStr = ""
+        rightValStr = ""
+        currentOperation = Operation.Empty
+        outputLbl.text = runningNumber
+        
+        
     }
     
     func playSound() {
